@@ -27,5 +27,16 @@ public class DataTypesjava {
         float f = 2.5F;
 
 
+        boolean bool = true;
+        bool = false;
+        //bool = 0; error
+
+        String s = "Hello orld";
+        char c = 'h';
+
+        byte b = 125;
+
+
+
     }
 }
