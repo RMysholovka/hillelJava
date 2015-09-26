@@ -1,3 +1,6 @@
+import org.hamcrest.core.StringContains;
+import org.junit.internal.JUnitSystem;
+
 /**
  * Created by RMysholovka on 17.09.2015.
  */
@@ -6,7 +9,7 @@ public class MyFirstClass {
         String helloMessage = "Hello world";
         System.out.println(helloMessage);
 
-        final int romaBirthYear = 1980;
+        int romaBirthYear = 1980;
 
         int romaAge = 35;
         int alexAge = 33;
