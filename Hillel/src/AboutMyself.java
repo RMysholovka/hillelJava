@@ -3,20 +3,20 @@
  */
 class AboutMyself {
     public static void main(String[] args){
-        String MyName = "Roman";
-        String MyLastName = "Mysholovka";
-        int YearOfBirth = 1980;
-        int CurrentYear = 2015;
-        int MyAge = CurrentYear - YearOfBirth;
+        String myName = "Roman";
+        String myLastName = "Mysholovka";
+        int yearOfBirth = 1980;
+        int currentYear = 2015;
+        int myAge = currentYear - yearOfBirth;
 
 
-        System.out.println("I'm: "+ MyName + " " + MyLastName);
-        System.out.println("My age: " + MyAge);
+        System.out.println("I'm: " + myName + " " + myLastName);
+        System.out.println("My age: " + myAge);
 
-        System.out.print("I'm: " + MyName); //альтернативный способ вывода
+        System.out.print("I'm: " + myName); //альтернативный способ вывода
         System.out.print(" ");
-        System.out.println(MyLastName);
-        System.out.println("My age: " + MyAge);
+        System.out.println(myLastName);
+        System.out.println("My age: " + myAge);
     }
 
 }
