@@ -51,7 +51,7 @@ public class Calculator {
         return res;
     }
 
-    private static double metFractTrunk( double number3, double res1, String operation) {
+    private static double metFractTrunk(double number3, double res1, String operation) {
 
         switch (operation) {
 
@@ -65,7 +65,12 @@ public class Calculator {
         return res1;
     }
 
+
+
 }
+
+
+
 
 
 
