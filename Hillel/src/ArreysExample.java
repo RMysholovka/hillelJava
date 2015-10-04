@@ -9,6 +9,7 @@ public class ArreysExample {
     }
 
     private static void forIch() {
+        System.out.println("Pleas enter 5 number at massiv: ");
         Scanner scanner = new Scanner(System.in);
         int[] intArray = new int[5];
         for (int i = 0; i < intArray.length; i++) {
@@ -24,7 +25,7 @@ public class ArreysExample {
         }
     }
 
-    private static void arreyaInit() {
+    private static void arreyInit() {
         int[] ints = {4, 6, 5, 6, 7};
 
         int ints2[] = {3, 4, 5, 6};
