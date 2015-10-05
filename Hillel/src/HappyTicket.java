@@ -17,7 +17,6 @@ public class HappyTicket {
         }
         System.out.println("Number happy tickets: " + a);
 
-
     }
 
 }
