@@ -20,8 +20,17 @@ public class WorkflowControl {
         } */
     }
 
-    public static String isEven(int someNumber) {
+    private static boolean isOdd(int someNumber) {
+        System.out.println();
         if (someNumber % 2 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static String isEven(int someNumber) {
+        if (someNumber % 2 != 0) {
             return "yes";
         } else {
             return "no";
