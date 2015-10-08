@@ -8,7 +8,7 @@ public class Zoo {
 
         }
         if (Cat.predator) {
-            System.out.println("cat is predaror");
+            System.out.println("cat is predator");
 
         }
         Cat tomCat = new Cat(true, 3, "Tom", "Blue-gray");
