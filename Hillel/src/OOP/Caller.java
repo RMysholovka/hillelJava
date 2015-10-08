@@ -1,3 +1,7 @@
+package OOP;
+
+import OOP.OOP;
+
 /**
  * Created by RMysholovka on 05.10.2015.
  */
