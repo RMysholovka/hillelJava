@@ -17,7 +17,7 @@ public class Encryption {
         int keylen = key.length();
         int msglen = message.length();
 
-       
+
 
         int j;
         j = 0;
