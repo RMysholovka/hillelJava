@@ -44,7 +44,7 @@ public class Triangle extends Shape {
 
     @Override
     public double getSquare() {
-        return a*b*Math.sin(k)/2;
+        return a*b*(Math.sin(k)/2);
 
     }
 
