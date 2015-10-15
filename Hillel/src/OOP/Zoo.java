@@ -12,7 +12,7 @@ public class Zoo {
 
         System.out.println(sound);
 
-        Animal animal = new Animal();
+        // Animal animal = new Animal();
         Cat cat = new Cat();
         Animal animalCat = new Cat();
 

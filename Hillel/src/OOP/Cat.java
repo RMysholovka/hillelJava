@@ -58,9 +58,11 @@ public class Cat extends Animal {
 
     @Override
     public String toString() {
-        return "Cat{" +
+        String result = super.toString();
+        /*return "Cat{" +
                 "pet=" + pet +
                 ", color='" + color + '\'' +
-                '}';
+                '}';*/
+        return result;
     }
 }
