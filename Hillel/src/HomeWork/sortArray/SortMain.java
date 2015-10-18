@@ -8,9 +8,9 @@ import java.util.*;
 public class SortMain {
     public static void main(String[] args) {
 
-        System.out.print(" BubbleSort down: \n");
-
+        System.out.println(" Random arrey integer: " );
         int[] arr = getIntsArr();
+        System.out.print("\n BubbleSort down: ");
 
 
         System.out.print("\n");
