@@ -14,33 +14,37 @@ public class Encryption {
         String decmsg = "";
 
 
-        int keylen = key.length();
-        int msglen = message.length();
-
+        //  int keylen = key.length();
+        // int msglen = message.length();
 
 
         int j;
         j = 0;
-        for (int i = 0; i < msglen; i++) {
-            encmsg = encmsg + (char) (message.charAt(i) ^ key.charAt(j));
+        for (int i = 0; i < message.length(); i++) {
+
+            encmsg = (encmsg + (char) (message.charAt(i) ^ key.charAt(j)));
+
             j++;
-            if (j == keylen) {
+            if (j == key.length()) {
                 j = 0;
                 System.out.println("Encoded message: " + encmsg);
             }
 
         }
+
         j = 0;
-        for (int i = 0; i < msglen; i++) {
+        for (int i = 0; i < message.length(); i++) {
             decmsg = decmsg + (char) (encmsg.charAt(i) ^ key.charAt(j));
             j++;
-            if (j == keylen) {
+            if (j == key.length()) {
                 j = 0;
             }
         }
+
         System.out.println("Decoded message: " + decmsg);
 
     }
+
 }
 
 

@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class ShapeCollection {
 
-    private Shape[] shapes = new Shape[10];
+    private Shape[] shapes = new Shape[5];
     private int size = 0;
 
 
@@ -79,13 +79,15 @@ public class ShapeCollection {
 
         Circle circle = new Circle("Circle", red, 7);
         Square square = new Square("Square", blue, 4);
-        Triangle triangle = new Triangle("Triangle", yellow, 4, 6, 45);
+        Triangle triangle = new Triangle("Triangle", yellow, 4, 6, 1.047);
         Parallelogram parallelogram = new Parallelogram("Parallelogram", green, 8, 5, 15);
         Rectangle rectangle = new Rectangle("Rectangle", black, 15, 10);
+        Circle circle1 = new Circle("Circle1", red, 7);
 
         ShapeCollection shapes = new ShapeCollection();
 
         shapes.add(circle);
+        shapes.add(circle1);
         shapes.add(square);
         shapes.add(triangle);
         shapes.add(parallelogram);
