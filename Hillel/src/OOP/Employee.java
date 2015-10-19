@@ -3,7 +3,7 @@ package OOP;
 import java.util.Arrays;
 
 /**
- * Created by RMysholovka on 12.10.2015.
+ * Created by ${Roman} on 14.10.2015.
  */
 public class Employee extends Human implements Vaccinable {
     private String position;
@@ -15,15 +15,11 @@ public class Employee extends Human implements Vaccinable {
         return "Employee{" +
                 "position='" + position + '\'' +
                 ", vaccines=" + Arrays.toString(vaccines) +
-                ", vaccineCounter=" + vaccineCounter +
-                '}';
+                '}' + super.toString();
     }
 
     public void vaccinate(String vaccine) {
-
         vaccines[vaccineCounter] = vaccine;
         vaccineCounter++;
     }
 }
-
-

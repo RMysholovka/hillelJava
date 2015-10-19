@@ -12,36 +12,24 @@ public class Cat extends Animal {
     boolean pet;
     String color;
 
-   /* public OOP.OOP.Cat(){
+    public Cat() {
         System.out.println("in cat's constructor");
-    }*/
+    }
 
-
-    public Cat(boolean ispet, int howManyage, String name, String color) {
-        pet = ispet;
-        age = howManyage;
+    public Cat(boolean isPet, int age, String name, String color) {
+        pet = isPet;
+        this.age = age;
         this.name = name;
         this.color = color;
     }
 
-    public Cat() {
-
-    }
-
-
-    /* public void init(boolean ispet, int howManyage, String name, String color){
-         pet = ispet;
-         age = howManyage;
-         this.name = name;
-         this.color = color;
-     }*/
     @Override
     public boolean equals(Object otherObject) {
-        System.out.println(" in cat equils method ");
+        System.out.println("in cat's equals method");
 
-        if (!(otherObject instanceof Cat)) return false; // специальная команда
+        if (!(otherObject instanceof Cat)) return false;
+
         Cat otherCat = (Cat) otherObject;
-
 
         if (pet != otherCat.pet) return false;
         if (age != otherCat.age) return false;
@@ -55,14 +43,13 @@ public class Cat extends Animal {
         return "Meow";
     }
 
-
     @Override
     public String toString() {
         String result = super.toString();
-        /*return "Cat{" +
+        result += " Cat{" +
                 "pet=" + pet +
                 ", color='" + color + '\'' +
-                '}';*/
+                '}';
         return result;
     }
 }

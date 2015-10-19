@@ -1,12 +1,12 @@
 package OOP;
 
-import java.lang.reflect.Array;
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Created by RMysholovka on 08.10.2015.
  */
-public abstract class Animal implements Vaccinable {
+public abstract class Animal implements Vaccinable, Serializable {
     String name;
     int age;
     private String[] vaccines = new String[3];
@@ -17,17 +17,12 @@ public abstract class Animal implements Vaccinable {
         vaccineCounter++;
     }
 
-
     public String toString() {
-        String result = " name ; " + name;
+        String result = "name: " + name;
         result += " age: " + age;
         result += " vaccines: " + Arrays.toString(vaccines);
         return result;
     }
 
-
     public abstract String makeSound();
-    /*{
-        return "noise";
-    }*/
 }
