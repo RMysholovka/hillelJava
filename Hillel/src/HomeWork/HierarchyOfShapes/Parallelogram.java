@@ -44,12 +44,13 @@ public class Parallelogram extends Shape {
 
     @Override
     public double getSquare() {
-        return a*b*Math.sin(k);
+        return a * b * Math.sin(k);
 
     }
+
     @Override
     public double getPerimeter() {
-        return 2*a + 2*b;
+        return 2 * a + 2 * b;
     }
 
 }

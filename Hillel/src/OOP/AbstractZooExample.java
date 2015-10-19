@@ -7,21 +7,21 @@ public class AbstractZooExample {
     public static void main(String[] args) {
 
 
-        Animal dog = new Dog();
+        // Animal dog = new Dog();
 
         printSound(new Cat());
-        printSound(dog);
+        //  printSound(dog);
 
         Cat cat = new Cat();
         vaccinate(cat);
-        vaccinate(dog);
+        //   vaccinate(dog);
 
 
         Employee employee = new Employee();
         vaccinate(employee);
 
         System.out.println(cat);
-        System.out.println(dog.toString());
+        //  System.out.println(dog.toString());
         System.out.println(employee);
 
 

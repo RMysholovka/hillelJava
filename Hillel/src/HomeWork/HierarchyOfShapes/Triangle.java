@@ -39,17 +39,17 @@ public class Triangle extends Shape {
         super(nameShape, color);
         this.a = a;
         this.b = b;
-        this.k =k;
+        this.k = k;
     }
 
     @Override
     public double getSquare() {
-        return a*b*(Math.sin(k)/2);
+        return a * b * Math.sin(k) / 2;
 
     }
 
     @Override
     public double getPerimeter() {
-        return a + b + (Math.sqrt(Math.pow(a,2)+Math.pow(b,2)-2*a*b*Math.cos(k)));
+        return a + b + (Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) - 2 * a * b * Math.cos(k)));
     }
 }

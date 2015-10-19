@@ -30,6 +30,6 @@ public class Square extends Shape {
 
     @Override
     public double getPerimeter() {
-        return 4*a;
+        return 4 * a;
     }
 }

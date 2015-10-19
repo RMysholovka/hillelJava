@@ -2,10 +2,12 @@ package OOP;
 
 import OOP.Animal;
 
+import java.util.Comparator;
+
 /**
  * Created by RMysholovka on 05.10.2015.
  */
-public class Cat extends Animal {
+public class Cat extends Animal implements Comparable<Cat> {
     public static final boolean domestic = true;
     public static final boolean predator = true;
 
@@ -13,13 +15,15 @@ public class Cat extends Animal {
     String color;
 
     public Cat() {
+        super("uncnow", 5);
         System.out.println("in cat's constructor");
     }
 
+
     public Cat(boolean isPet, int age, String name, String color) {
+        super(name, age);
         pet = isPet;
-        this.age = age;
-        this.name = name;
+
         this.color = color;
     }
 
@@ -27,13 +31,13 @@ public class Cat extends Animal {
     public boolean equals(Object otherObject) {
         System.out.println("in cat's equals method");
 
+        if (!super.equals(otherObject)) return false;
+
         if (!(otherObject instanceof Cat)) return false;
 
         Cat otherCat = (Cat) otherObject;
 
         if (pet != otherCat.pet) return false;
-        if (age != otherCat.age) return false;
-        if (!name.equals(otherCat.name)) return false;
         if (!color.equals(otherCat.color)) return false;
         return true;
     }
@@ -52,4 +56,10 @@ public class Cat extends Animal {
                 '}';
         return result;
     }
+
+    @Override
+    public int compareTo(Cat o) {
+        return this.getName().compareTo(o.getName());
+    }
+
 }

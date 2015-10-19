@@ -13,8 +13,6 @@ public abstract class Shape {
     protected Paint color;
 
 
-
-
     public String getNameShape() {
         return nameShape;
     }
