@@ -19,6 +19,14 @@ public class Cat extends Animal implements Comparable<Cat> {
         System.out.println("in cat's constructor");
     }
 
+    /**
+     * Constructor description
+     *
+     * @param isPet coment about cat
+     * @param age   test
+     * @param name  test
+     * @param color test
+     */
 
     public Cat(boolean isPet, int age, String name, String color) {
         super(name, age);
