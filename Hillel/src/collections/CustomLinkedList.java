@@ -39,10 +39,15 @@ public class CustomLinkedList {
 
     public Object get(int index) {
         if (head == null) {
+            return null;
         } else {
             ListElement current = head;
-            // int current = index;
-            //while (current != 0&& current)
+
+            for (int i = index; i != 0; i--) {
+                if (current.next == null) {
+
+                }
+            }           //while (current != 0&& current)
         }
         return null;
     }
