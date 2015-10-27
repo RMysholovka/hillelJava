@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by ${Roman} on 18.10.2015.
  */
 public class Xor {
-//test test test
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
