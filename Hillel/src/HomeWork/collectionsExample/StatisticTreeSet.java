@@ -28,7 +28,7 @@ public class StatisticTreeSet {
 
 
     public static TreeSet<Integer> addIntegersTreeSet() {
-        TreeSet<Integer> list = new TreeSet<>();
+        TreeSet<Integer> list = new TreeSet();
 
         for (int i = 0; i < 9999999; i++) {
 

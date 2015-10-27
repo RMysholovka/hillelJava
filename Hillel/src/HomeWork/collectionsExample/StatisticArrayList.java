@@ -52,7 +52,7 @@ public class StatisticArrayList {
     }
 
     public static ArrayList<Integer> addIntegersArrayList() {
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList();
 
         for (int i = 0; i < 9999999; i++) {
             list.add(i);
