@@ -11,7 +11,7 @@ public class RecursiveLinkedListTest {
 
     @Test
     public void sizeChangedOnAdd() {
-        CustomLinkedList list = new CustomLinkedList();
+        RecursiveLinkedList list = new RecursiveLinkedList();
 
         Assert.assertEquals(0, list.size());
         list.add(1);
@@ -19,7 +19,7 @@ public class RecursiveLinkedListTest {
         list.add(1);
         Assert.assertEquals(2, list.size());
         list.add(1);
-        Assert.assertEquals(3, list.size());
+
 
 
     }
@@ -27,7 +27,7 @@ public class RecursiveLinkedListTest {
     @Test
 
     public void getReturnsAppropriateElements() {
-        CustomLinkedList list = new CustomLinkedList();
+        RecursiveLinkedList list = new RecursiveLinkedList();
 
         list.add(1);
         list.add(2);

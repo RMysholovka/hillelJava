@@ -18,7 +18,7 @@ public class ListElement {
         } else {
             return 1 + next.size();
         }
-        //return  next == null?
+        //return  next == null
     }
 
     public void add(Object value) {
