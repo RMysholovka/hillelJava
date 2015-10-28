@@ -11,7 +11,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        Collection<Cat> cats = new ArrayList<>();
+        Collection<Cat> cats = new ArrayList();
         // List<Cat> cats = new ArrayList<>();
         cats.add(new Cat(false, 10, "tom", "black"));
 
@@ -19,7 +19,7 @@ public class Main {
 
         //System.out.println(cats.get(0));
 
-        Set<Cat> catSet = new TreeSet<>();
+        Set<Cat> catSet = new TreeSet();
         catSet.add(new Cat(false, 10, "tom", "black"));
         catSet.add(new Cat(false, 10, "tom", "black"));
         catSet.add(new Cat(false, 10, "tom", "black"));
@@ -28,13 +28,13 @@ public class Main {
 
     private static void someMethod(Collection<Cat> cats) {
 
-        cats.forEach(System.out::println);
+        //cats.forEach(System.out::println);
 
     }
 
 
     private static void genericAndCollections() {
-        ArrayList<Cat> cats = new ArrayList<>();
+        ArrayList<Cat> cats = new ArrayList();
         cats.add(new Cat(false, 10, "tom", "black"));
         // cats.add(10);
         cats.add(new Kitten(false, 10, "tom", "black"));

@@ -28,7 +28,7 @@ public class StatisticLinkedList {
 
 
     public static LinkedList<Integer> addIntegersLinkedList() {
-        LinkedList<Integer> list = new LinkedList<>();
+        LinkedList<Integer> list = new LinkedList();
 
         for (int i = 0; i < 9999999; i++) {
 
