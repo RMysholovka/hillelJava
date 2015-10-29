@@ -6,9 +6,9 @@ package pattern.duck;
 public class RubberDuck extends Duck {
 
 
-    @Override
-    public String quack() {
-        return super.quack();
+    public RubberDuck() {
+        // FlyBehavior = new FlyNoWay();
+        //quackBehavior = new Quack();
     }
 
     @Override
@@ -16,8 +16,5 @@ public class RubberDuck extends Duck {
         return "Rubber duck";
     }
 
-    @Override
-    public String fly() {
-        return "fly no way";
-    }
+
 }

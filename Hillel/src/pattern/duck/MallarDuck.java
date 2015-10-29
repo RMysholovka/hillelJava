@@ -6,7 +6,16 @@ package pattern.duck;
 public class MallarDuck extends Duck {
 
 
+    public MallarDuck() {
+
+        flyBehavior = new FlyBehavior();
+        quackBehavior = new QuackBehavior();
+    }
+
+
+
     public String display() {
         return "MallarDuck";
     }
 }
+

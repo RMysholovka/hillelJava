@@ -3,7 +3,7 @@ package pattern.duck;
 /**
  * Created by RMysholovka on 26.10.2015.
  */
-public abstract class Duck {
+public abstract class Duck implements FlyBehavior, QuackBehavior {
     public String quack() {
         return "quack";
     }
