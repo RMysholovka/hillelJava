@@ -1,6 +1,5 @@
 package pattern.comparator;
 
-import OOP.Animal;
 import OOP.Cat;
 
 import java.util.ArrayList;
@@ -42,3 +41,4 @@ public class CatComparator {
         cats.forEach(System.out::println);
     }
 }
+

@@ -7,21 +7,22 @@ import java.util.Arrays;
  * Created by RMysholovka on 08.10.2015.
  */
 public abstract class Animal implements Vaccinable, Serializable {
-    private String name;
+    public String someField = "Animal's field";
+    public String name;
     private int age;
     private String[] vaccines = new String[3];
     private int vaccineCounter = 0;
 
+
     public Animal(String name, int age) {
-        this.age = age;
         this.name = name;
+        this.age = age;
     }
 
     public void vaccinate(String vaccine) {
         vaccines[vaccineCounter] = vaccine;
         vaccineCounter++;
     }
-
 
     public String toString() {
         String result = "name: " + name;
@@ -32,7 +33,6 @@ public abstract class Animal implements Vaccinable, Serializable {
 
     public String getName() {
         return name;
-
     }
 
     public int getAge() {
@@ -67,7 +67,17 @@ public abstract class Animal implements Vaccinable, Serializable {
         return result;
     }
 
-
-
     public abstract String makeSound();
+    /*{
+        return "noise";
+    }*/
+
+    public String getSomeField() {
+        return someField;
+    }
+
+    public static String getTypeName() {
+        return "Animal";
+    }
 }
+

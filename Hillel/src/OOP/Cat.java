@@ -1,13 +1,11 @@
 package OOP;
 
-import OOP.Animal;
-
-import java.util.Comparator;
 
 /**
  * Created by RMysholovka on 05.10.2015.
  */
 public class Cat extends Animal implements Comparable<Cat> {
+
     public static final boolean domestic = true;
     public static final boolean predator = true;
 
