@@ -6,30 +6,12 @@ package pattern.duck;
 public class Decoy extends Duck {
 
     public Decoy() {
-        flyBehavior = new FlyBehavior();
-        quackBehavior = new QuackBehavior();
+        flyBehavior = new FlyNoWay();
+        quackBehavior = new Quack();
     }
 
-    /*
-        @Override
-        public String quack() {
-            return super.quack();
-        }
-    */
     @Override
     String display() {
-        return null;
+        return "Decoy";
     }
-
-   /* @Override
-    public String swim() {
-        return super.swim();
-    }
-    */
-
-    @Override
-    public String fly() {
-        return "fly no way";
-    }
-
 }

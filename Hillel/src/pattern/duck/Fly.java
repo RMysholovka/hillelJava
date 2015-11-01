@@ -6,7 +6,7 @@ package pattern.duck;
 public class Fly implements FlyBehavior {
     @Override
     public String fly() {
-        return "fly";
+        return "I'm flying!";
     }
 
 }

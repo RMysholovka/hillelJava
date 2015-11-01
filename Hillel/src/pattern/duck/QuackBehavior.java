@@ -6,5 +6,5 @@ package pattern.duck;
 public interface QuackBehavior {
     String quack();
 
-    String squick();
+
 }

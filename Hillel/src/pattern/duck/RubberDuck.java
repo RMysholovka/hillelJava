@@ -5,16 +5,13 @@ package pattern.duck;
  */
 public class RubberDuck extends Duck {
 
-
     public RubberDuck() {
-        // FlyBehavior = new FlyNoWay();
-        //quackBehavior = new Quack();
+        flyBehavior = new FlyNoWay();
+        quackBehavior = new Squick();
     }
 
     @Override
     String display() {
-        return "Rubber duck";
+        return "rubber duck";
     }
-
-
 }

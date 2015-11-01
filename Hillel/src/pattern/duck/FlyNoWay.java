@@ -6,8 +6,9 @@ package pattern.duck;
 public class FlyNoWay implements FlyBehavior {
 
 
+
     @Override
     public String fly() {
-        return "No fly";
+        return "Fly no way (";
     }
 }

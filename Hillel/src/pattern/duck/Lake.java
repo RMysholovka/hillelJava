@@ -5,9 +5,28 @@ package pattern.duck;
  */
 public class Lake {
     public static void main(String[] args) {
-        Duck duck = new RubberDuck();
+
+        test(new RubberDuck());
+
+        test(new MallarDuck());
+
+        test(new Decoy());
+
+        System.out.println("test jet engine");
+
+        Duck pilot = new RubberDuck();
+
+        test(pilot);
+
+        pilot.flyBehavior = new Jet();
+
+        test(pilot);
+    }
+
+    private static void test(Duck duck) {
         System.out.println(duck.quack());
         System.out.println(duck.fly());
         System.out.println(duck.display());
+        System.out.println();
     }
 }

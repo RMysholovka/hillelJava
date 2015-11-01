@@ -5,17 +5,14 @@ package pattern.duck;
  */
 public class MallarDuck extends Duck {
 
-
     public MallarDuck() {
-
-        flyBehavior = new FlyBehavior();
-        quackBehavior = new QuackBehavior();
+        flyBehavior = new Fly();
+        quackBehavior = new Quack();
     }
 
-
-
+    @Override
     public String display() {
-        return "MallarDuck";
+        return "mallard duck";
     }
 }
 

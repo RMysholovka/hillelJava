@@ -11,27 +11,29 @@ public class Cat extends Animal implements Comparable<Cat> {
     public static final boolean domestic = true;
     public static final boolean predator = true;
 
+    public String someField = "cat's field";
     boolean pet;
     String color;
 
+    /**
+     * creates a new instance of Cat
+     */
     public Cat() {
-        super("uncnow", 5);
+        super("unknown", 0);
         System.out.println("in cat's constructor");
     }
 
     /**
      * Constructor description
      *
-     * @param isPet coment about cat
-     * @param age   test
-     * @param name  test
-     * @param color test
+     * @param isPet comment about pet
+     * @param age   how much years
+     * @param name  name of cat
+     * @param color some color
      */
-
     public Cat(boolean isPet, int age, String name, String color) {
         super(name, age);
         pet = isPet;
-
         this.color = color;
     }
 
@@ -65,9 +67,20 @@ public class Cat extends Animal implements Comparable<Cat> {
         return result;
     }
 
-    @Override
-    public int compareTo(Cat o) {
-        return this.getName().compareTo(o.getName());
+    public String getSomeField() {
+        return someField;
     }
 
+    public static String getTypeName() {
+        return "Cat";
+    }
+
+
+    @Override
+    public int compareTo(Cat o) {
+        if (this.equals(o)) {
+            return 0;
+        }
+        return this.getName().compareTo(o.getName());
+    }
 }
