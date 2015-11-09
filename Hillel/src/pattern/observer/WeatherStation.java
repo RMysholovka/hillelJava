@@ -1,20 +1,28 @@
 package pattern.observer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by RMysholovka on 05.11.2015.
  */
 public class WeatherStation {
-    int temperature;
-    int hamdity;
-    int pressure;
+    private int temperature;
+    private int hamidity;
+    private int pressure;
 
-    WeatherDisplay current = new WeatherDisplay();
+    List<WeatherObserver> observers = new ArrayList<>();
 
 
-    public void meassurementChange() {
-        current.set(temperature, hamdity, pressure);
-        current.display();
+    public void measurementChanged() {
+        for (WeatherObserver observer : observers) {
+            observer.updateWeather(this);
+        }
 
+    }
+
+    public void register(WeatherObserver observer) {
+        observers.add(observer);
     }
 
     public int getTemperature() {
@@ -22,7 +30,7 @@ public class WeatherStation {
     }
 
     public int getHamdity() {
-        return hamdity;
+        return hamidity;
     }
 
     public int getPressure() {
@@ -34,7 +42,7 @@ public class WeatherStation {
     }
 
     public void setHamdity(int hamdity) {
-        this.hamdity = hamdity;
+        this.hamidity = hamdity;
     }
 
     public void setPressure(int pressure) {

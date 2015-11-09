@@ -3,19 +3,22 @@ package pattern.observer;
 /**
  * Created by RMysholovka on 05.11.2015.
  */
-public class WeatherDisplay {
+public class WeatherDisplay implements WeatherObserver {
     int temperature;
-    int hamdity;
+    int hamidity;
     int pressure;
 
-    public void set(int temperature, int hamdity, int pressure) {
+    public void updateWeather(WeatherStation station) {
         this.temperature = temperature;
-        this.hamdity = hamdity;
+        this.hamidity = hamidity;
         this.pressure = pressure;
 
     }
 
     public void print() {
-        System.out.println("temperature: " + temperature + ", hamidity:" + hamdity + ", pressure:" + pressure);
+        System.out.println("temperature: " + temperature + ", hamidity:" + hamidity + ", pressure:" + pressure);
+    }
+
+    public void display() {
     }
 }
