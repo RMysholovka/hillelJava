@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Beverage beverage = new Robusta();
+     /*   Beverage beverage = new Robusta();
         beverage.setMilk(true);
         System.out.println(beverage.description() + " " + beverage.cost());
 
@@ -16,14 +16,21 @@ public class Main {
         int cash = scanner.nextInt();
         check(cash, beverage);
 
-    }
+    }*/
+        
+        Beverage beverage = new Arabica();
+        beverage = new Milk(beverage);
+        beverage = new Milk(beverage);
 
-    private static void check(int cash, Beverage beverage) {
+        System.out.println(beverage.description());
+        System.out.println(beverage.cost);
+
+    /*private static void check(int cash, Beverage beverage) {
         if (cash != beverage.cost()) {
             System.out.println("kim");
 
         } else {
             System.out.println("ok");
-        }
+        }*/
     }
 }

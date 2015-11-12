@@ -4,29 +4,12 @@ package pattern.decorator;
  * Created by RMysholovka on 12.11.2015.
  */
 public abstract class Beverage {
-    private final int cost;
+    protected int cost;
     private String description;
 
-    private int milkCost = 5;
-    private int creamCost = 8;
-    private boolean hasMilk;
-    private boolean hasCream;
-
-    public Beverage(int cost, String description) {
-        this.cost = cost;
-        this.description = description;
-    }
 
     public int cost() {
-        int total = cost;
-        if (hasMilk) {
-            total += milkCost;
 
-        }
-        if (hasCream) {
-            total += creamCost;
-
-        }
         return cost;
     }
 
@@ -35,12 +18,12 @@ public abstract class Beverage {
 
     }
 
-    public void setCream(boolean hasCream) {
-        this.hasCream = hasCream;
-
+    public String setDescription(String description) {
+        this.description = description;
+        return description;
     }
 
-    public void setMilk(boolean hasMilk) {
-        this.hasMilk = hasMilk;
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 }

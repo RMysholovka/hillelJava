@@ -6,6 +6,7 @@ package pattern.decorator;
 public class HouseBlend extends Beverage {
 
     public HouseBlend() {
-        super(10, "HouseBlend coffe");
+        setCost(10);
+        setDescription("HouseBlend coffe");
     }
 }
