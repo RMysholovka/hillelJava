@@ -1,7 +1,7 @@
 package pattern.decorator;
 
 /**
- * Created by MFarsikov on 12.11.2015.
+ * Created by RMysholovka on 12.11.2015.
  */
 public abstract class Beverage {
 
