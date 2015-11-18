@@ -8,9 +8,8 @@ import java.awt.event.ActionListener;
  * Created by RMysholovka on 09.11.2015.
  */
 public class CalculusLisener implements ActionListener {
-
-    private int firstOperand;
     private JTextField textField;
+    private int firstOperand;
 
     public CalculusLisener(JTextField textField) {
         this.textField = textField;
@@ -19,7 +18,7 @@ public class CalculusLisener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String buttonPressed = e.getActionCommand();
-        System.out.println(buttonPressed + "Key pressed");
+        System.out.println(buttonPressed + " button pressed");
 
 
         switch (buttonPressed) {

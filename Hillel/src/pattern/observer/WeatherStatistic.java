@@ -8,20 +8,18 @@ import java.util.List;
  */
 public class WeatherStatistic implements WeatherObserver {
     List<Integer> temperatures = new ArrayList<>();
-
-    List<Integer> hamidities = new ArrayList<>();
-
-    List<Integer> pressures = new ArrayList<>();
-
+    List<Integer> humidities = new ArrayList<>();
+    List<Integer> pressueres = new ArrayList<>();
 
     public void updateWeather(WeatherStation station) {
-        temperatures.add(temperature);
-        hamidities.add(hamidity);
-        pressures.add(pressure);
+        temperatures.add(station.getTemperature());
+        humidities.add(station.getHumidity());
+        pressueres.add(station.getPressure());
     }
 
     public void display() {
-        System.out.println("weather statistic:");
-
+        System.out.println("Statistic: temperatures: " + temperatures +
+                ", humidities: " + humidities +
+                ", pressures: " + pressueres);
     }
 }

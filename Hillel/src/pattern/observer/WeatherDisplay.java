@@ -5,20 +5,16 @@ package pattern.observer;
  */
 public class WeatherDisplay implements WeatherObserver {
     int temperature;
-    int hamidity;
+    int humidity;
     int pressure;
 
     public void updateWeather(WeatherStation station) {
-        this.temperature = temperature;
-        this.hamidity = hamidity;
-        this.pressure = pressure;
-
-    }
-
-    public void print() {
-        System.out.println("temperature: " + temperature + ", hamidity:" + hamidity + ", pressure:" + pressure);
+        this.temperature = station.getTemperature();
+        this.humidity = station.getHumidity();
+        this.pressure = station.getPressure();
     }
 
     public void display() {
+        System.out.println("temperature: " + temperature + ", humidity: " + humidity + ", pressure: " + pressure);
     }
 }

@@ -8,41 +8,43 @@ import java.util.List;
  */
 public class WeatherStation {
     private int temperature;
-    private int hamidity;
+    private int humidity;
     private int pressure;
 
-    List<WeatherObserver> observers = new ArrayList<>();
+    private List<WeatherObserver> observers = new ArrayList<>();
 
-
-    public void measurementChanged() {
+    public void measurmentChanged() {
         for (WeatherObserver observer : observers) {
             observer.updateWeather(this);
         }
-
     }
 
     public void register(WeatherObserver observer) {
         observers.add(observer);
     }
 
+    public void removeObserver(WeatherObserver observer) {
+        observers.remove(observer);
+    }
+
     public int getTemperature() {
         return temperature;
-    }
-
-    public int getHamdity() {
-        return hamidity;
-    }
-
-    public int getPressure() {
-        return pressure;
     }
 
     public void setTemperature(int temperature) {
         this.temperature = temperature;
     }
 
-    public void setHamdity(int hamdity) {
-        this.hamidity = hamdity;
+    public int getHumidity() {
+        return humidity;
+    }
+
+    public void setHumidity(int humidity) {
+        this.humidity = humidity;
+    }
+
+    public int getPressure() {
+        return pressure;
     }
 
     public void setPressure(int pressure) {
