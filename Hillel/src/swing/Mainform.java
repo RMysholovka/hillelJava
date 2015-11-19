@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
  * Created by RMysholovka on 09.11.2015.
  */
 public class Mainform extends JFrame {
+   //test
     private JPanel panel;
     private JButton exitButton;
     private JButton a1Button;
