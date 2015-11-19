@@ -20,11 +20,6 @@ public class Mainform extends JFrame {
     private JButton a9Button;
     private JButton a7Button;
     private JButton a0Button;
-    private JButton button1;
-    private JButton button11;
-    private JButton button12;
-    private JTextField textField1;
-    private JLabel label;
     private JTextField textField;
     private JButton equalButton;
     private JButton plusButton;
@@ -36,7 +31,7 @@ public class Mainform extends JFrame {
         setVisible(true);
         exitButton.addActionListener(new QuitAction());
 
-        ActionListener keyListener = new CalculusLisener(textField);
+        ActionListener keyListener = new CalculusListener(textField);
         a1Button.addActionListener(keyListener);
         a2Button.addActionListener(keyListener);
         a3Button.addActionListener(keyListener);
@@ -65,7 +60,6 @@ public class Mainform extends JFrame {
 
 
     }
-
 
     public static void main(String[] args) {
         new Mainform();
