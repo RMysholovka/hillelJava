@@ -6,12 +6,78 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Properties;
 
 /**
  * Created by RMysholovka on 19.11.2015.
  */
 public class IOMain {
     public static void main(String[] args) {
+        try (FileInputStream fileInputStream = new FileInputStream("C:\\Users\\RMysholovka\\IdeaProjects\\MyHillelJava\\Hillel\\config.properties");) {
+            Properties properties = new Properties();
+            properties.load(fileInputStream);
+            String carOwner = "carOwner";
+            properties.getProperty("carOwner");
+            String carYear = properties.getProperty("carYear");
+            String carModel = properties.getProperty("carModel");
+
+            CarOwner owner = new CarOwner(carOwner);
+            Car car = new Car(carModel, Integer.parseInt(carYear), owner, "black");
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
+    }
+
+    private static void serialVersionUid() {
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("d:/myData.dat"))) {
+
+            List<Car> cars = (List<Car>) inputStream.readObject();
+            System.out.println(cars);
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println(e);
+        }
+    }
+
+    private static void objectStore() {
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("d:/myData.dat"))) {
+            CarOwner owner = new CarOwner("Ivan");
+            List<Car> cars = Arrays.asList(new Car("BMW", 1995, owner, "White"), new Car("TOYOTA", 2008, owner, "Black"));
+
+            for (Car car : cars) {
+                owner.addCar(car);
+            }
+            outputStream.writeObject(cars);
+
+
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
+        serialVersionUid();
+    }
+
+    private static void arrays() {
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("d:/myData.dat"))) {
+            long[] longs = new long[]{1, 2, 3, 4, 5, 6};
+            outputStream.writeObject(longs);
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("d:/myData.dat"))) {
+
+            Object longsAsObject = inputStream.readObject();
+            long[] longs = (long[]) longsAsObject;
+            System.out.println(Arrays.toString(longs));
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println(e);
+        }
+    }
+
+    private static void primitiveTypes() {
         try (DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream("d:/myData.dat"))) {
             long[] longs = new long[]{1, 2, 3, 4, 5, 6};
             for (long aLong : longs) {
@@ -31,8 +97,6 @@ public class IOMain {
         } catch (IOException e) {
             System.out.println(e);
         }
-
-
     }
 
 
