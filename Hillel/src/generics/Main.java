@@ -1,5 +1,6 @@
 package generics;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -31,6 +32,20 @@ public class Main {
 
         copy(employeeList, copyEmployeeList);
         System.out.println(copyEmployeeList.size());
+
+
+        //managerList = copy (employeeList, managerList);
+
+        employeeList = copy(managerList, employeeList);
+
+    }
+
+    // public static void overloadedMethod(List<String> strings){
+
+    // }//С джинериками одинаковые методы с азными типами создавать нельзя
+
+    public static void overloadedMethod(List<Integer> integers) {
+
     }
 
     public static <K, V> void copy(Pair<K, V> source, Pair<K, V> target) {
@@ -39,12 +54,15 @@ public class Main {
         target.value = source.value;
     }
 
-    public static <T> void copy(List<T> source, List<T> target) {
+    public static <T> List<T> copy(List<? extends T> source, List<T> target) {
         target.addAll(source);
+        return target;
     }
 
-    public static <T> List<T> copyFunction(List<T> source, List<T> target) {
+    public static <T> List<T> copyFunction(List<? extends T> source) {
+        List<T> target = new ArrayList<>();
         target.addAll(source);
+
         return target;
     }
 
