@@ -16,9 +16,13 @@ public class DatabaseMain {
         Connection connection = DriverManager.getConnection(connectionString, "postgres", "postgres");
 
 
-        // notCorrectUpdate(connection);
+        notCorrectUpdate(connection);
 
 
+        correctUpdate(connection);
+    }
+
+    private static void correctUpdate(Connection connection) throws SQLException {
         String sql = "UPDATE store SET name = ? WHERE id = ?";
 
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -26,7 +30,7 @@ public class DatabaseMain {
         preparedStatement.setInt(2, 1);
         preparedStatement.executeUpdate();
         preparedStatement.close();
-        
+
         read(connection);
         connection.close();
     }
