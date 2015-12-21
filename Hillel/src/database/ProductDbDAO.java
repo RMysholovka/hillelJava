@@ -11,7 +11,7 @@ import java.util.Optional;
 public class ProductDbDAO implements ProductDAO {
     private Connection connection;
 
-    public ProductDbDAO(Connection connection) {
+    public ProductDbDAO() {
 
         System.setProperty("jdbc.drivers", "org.postgresql.Driver");
         String connectionString = "jdbc:postgresql://localhost:5432/postgres";
@@ -19,10 +19,21 @@ public class ProductDbDAO implements ProductDAO {
 
             connection = DriverManager.getConnection(connectionString, "postgres", "postgres");
 
-            this.connection = connection;
-        } catch (Exception e) {
+
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+       /* Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+
+               try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+        }));*/
     }
 
 
@@ -136,4 +147,14 @@ public class ProductDbDAO implements ProductDAO {
             throw new RuntimeException(e);
         }
     }
+
+   /* public void close (){
+        try {
+            connection.close();
+        }*/
+/*
+    @Override
+    protected void finalize() throws Throwable {
+        connection.close();
+    }*/
 }
