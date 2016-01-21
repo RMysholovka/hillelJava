@@ -80,7 +80,11 @@ public class Java8Main {
 
 
         List<String> colors = apples.stream()
+               // .filter(isHeavyAndGreen)
                 .map(Apple::getColor)
+              //  .limit(2)
+                .distinct()//убирает дубликаты
+                .sorted()// сортирует
                 .collect(Collectors.toList());
         System.out.println(colors);
 
