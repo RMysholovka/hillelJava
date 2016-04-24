@@ -20,7 +20,7 @@ public class Robot
         y = y + distance * Math.sin(course / 180 * Math.PI);
     }
 
-    //111 ������ ��������� ������
+    //111 33 22������ ��������� ������
     public void printCoordinates() {
         System.out.println(x + " , " + y);
     }
