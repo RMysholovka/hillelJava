@@ -14,13 +14,13 @@ public class Robot
         this.y = y;
     }
 
-    // Передвижение на дистанцию distance
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ distance
     public void forward(int distance) {
         x = x + distance * Math.cos(course / 180 * Math.PI);
         y = y + distance * Math.sin(course / 180 * Math.PI);
     }
 
-    // Печать координат робота
+    //111 пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     public void printCoordinates() {
         System.out.println(x + " , " + y);
     }
